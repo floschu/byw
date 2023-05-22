@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name_short">BYW</string>
+    <string name="overview_title">Blur Your\nWallpaper</string>
+    <string name="overview_button_wallpaper">Change Wallpaper</string>
+    <string name="overview_button_change_home">Change Home</string>
+    <string name="overview_button_change_lockscreen">Change Lockscreen</string>
+    <string name="overview_subtitle_home">Home</string>
+    <string name="overview_subtitle_lockscreen">Lockscreen</string>
+    <string name="overview_button_apply">Apply Wallpaper</string>
+    <string name="overview_wallpaper_set_success">%s Was Set</string>
+    <string name="overview_wallpaper_set_error">Error While Setting %s</string>
+    <string name="overview_content_description_linked">Link Editing</string>
+    <string name="overview_content_description_info">Show Info</string>
+    <string name="detail_title">Blur</string>
+    <string name="detail_button_cancel">Cancel</string>
+    <string name="detail_button_done">Done</string>
+    <string name="detail_type_home">Home</string>
+    <string name="detail_type_lockscreen">Lockscreen</string>
+    <string name="info_title">Info</string>
+    <string name="info_button_made_by_me">Made By Flosch</string>
+    <string name="info_button_send_feedback">Send Feedback</string>
+    <string name="feedback_email_subject">Feedback for BYW</string>
+    <string name="feedback_email_chooser_title">Send Email Using…</string>
+    <string name="feedback_email_no_app">No Email Clients Installed</string>
+</resources>
