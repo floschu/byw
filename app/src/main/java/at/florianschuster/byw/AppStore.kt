@@ -94,28 +94,26 @@ class AppStore(
 
     fun dispatch(action: Action) {
         when (action) {
-            is Action.SetEditSeparately -> {
-                _state.update { previous ->
-                    previous.copy(
-                        editSeparately = action.editSeparately,
-                        selectedLockScreen = if (action.editSeparately) {
-                            previous.selectedLockScreen
-                        } else {
-                            previous.selectedHome
-                        },
-                        lockScreenBlurRadius = if (action.editSeparately) {
-                            previous.lockScreenBlurRadius
-                        } else {
-                            previous.homeBlurRadius
-                        }
-                    )
-                }
+            is Action.SetEditSeparately -> _state.update {
+                it.copy(editSeparately = action.editSeparately)
             }
 
-            is Action.SetHome -> _state.update { it.copy(selectedHome = action.uri) }
-            is Action.SetLockScreen -> _state.update { it.copy(selectedLockScreen = action.uri) }
-            is Action.SetHomeBlur -> _state.update { it.copy(homeBlurRadius = action.blur) }
-            is Action.SetLockScreenBlur -> _state.update { it.copy(lockScreenBlurRadius = action.blur) }
+            is Action.SetHome -> _state.update {
+                it.copy(selectedHome = action.uri)
+            }
+
+            is Action.SetLockScreen -> _state.update {
+                it.copy(selectedLockScreen = action.uri)
+            }
+
+            is Action.SetHomeBlur -> _state.update {
+                it.copy(homeBlurRadius = action.blur)
+            }
+
+            is Action.SetLockScreenBlur -> _state.update {
+                it.copy(lockScreenBlurRadius = action.blur)
+            }
+
             is Action.Apply -> scope.launch {
                 _state.update { it.copy(loading = true) }
                 withContext(ioDispatcher) {
